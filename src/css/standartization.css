@@ -1,0 +1,49 @@
+button {
+	cursor: pointer;
+	font-family: inherit;
+	color: currentColor;
+}
+.link {
+	text-decoration: none;
+	color: currentColor;
+}
+.list {
+	list-style: none;
+	color: --text;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+
+	padding: 0;
+	margin: 0;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+body.modal-open {
+	overflow: hidden;
+}

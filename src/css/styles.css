@@ -1,25 +1,538 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
-
+@import "./standartization.css";
+@import "./header.css";
+@import "./portfolio.css";
+@import "./footer.css";
+@import "./backdrop.css";
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+	--white-background: #ffffff;
+	--primary-brand: #4d5ae5;
+	--text: #434455;
+	--dark: #2e2f42;
+	--light: #f4f4fd;
+	--pressed-state: #404bbf;
+	--cornflower: #e7e9fc;
+	--light-slate: #8e8f99;
+	--modal-background: #fcfcfc;
 }
+
+body {
+	font-family: "Roboto", sans-serif;
+	color: var(--text);
+	background-color: var(--white-background);
+}
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* ================================================-_(common-styles)_-================================================ */
+.container {
+	max-width: 1158px;
+	padding: 0 15px;
+	margin: 0 auto;
+	align-items: center;
+	/* outline: 1px solid #000; */
+}
+@media only screen and (max-width: 767px) {
+	.container {
+		max-width: 428px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+	.container {
+		max-width: 768px;
+	}
+	.team .container,
+	.customers .container,
+	.footer .container {
+		width: 582px;
+		margin: 0 auto;
+	}
+}
+
+.thickness {
+	font-weight: 500;
+}
+.link-styles {
+	color: var(--primary-brand);
+	font-family: "Raleway", sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1.17;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+.text {
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--text);
+}
+.section-title {
+	font-size: 36px;
+	line-height: 1.1;
+	letter-spacing: 0.02em;
+	text-transform: capitalize;
+	text-align: center;
+	color: var(--dark);
+
+	margin-bottom: 72px;
+}
+.flex-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 72px 24px;
+	justify-content: center;
+}
+
+.section-geometry {
+	padding: 120px 0;
+}
+@media only screen and (max-width: 1157px) {
+	.section-geometry {
+		padding: 96px 0;
+	}
+}
+
+/* ================================================-_(/common-styles)_-=============================================== */
+
+/* ================================================-_(main)_-================================================ */
+
+/* ================================================-_(hero)_-================================================ */
+.hero {
+	background-color: var(--dark);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.title-hero {
+	color: var(--white-background);
+	font-size: 56px;
+	line-height: 1.07;
+	letter-spacing: 0.02em;
+	margin: 0 auto;
+	text-align: center;
+
+	max-width: 496px;
+	margin-bottom: 48px;
+}
+.button-hero {
+	color: var(--white-background);
+	background: var(--primary-brand);
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+	font-weight: 500;
+
+	min-width: 169px;
+	height: 56px;
+	display: block;
+	margin: 0 auto;
+	padding: 16px 32px;
+	border: none;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.hero {
+	padding: 188px 0px;
+}
+.button-hero:hover,
+.button-hero:focus {
+	background-color: var(--pressed-state);
+}
+
+/*==============================================================================================================================================
+----------------------------------------------------------------------Mobile
+================================================================================================================================================*/
+@media only screen and (max-width: 767px) {
+	.title-hero {
+		font-size: 36px;
+		line-height: 1.11;
+		margin-bottom: 72px;
+		max-width: 320px;
+	}
+}
+@media only screen and (max-width: 428px) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../img/hero-bg_mob@1x.jpg");
+	}
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../img/hero-bg_mob@2x.jpg");
+		}
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Mobile
+================================================================================================================================================*/
+/*==============================================================================================================================================
+----------------------------------------------------------------------Tablet
+================================================================================================================================================*/
+@media only screen and (min-width: 429px) and (max-width: 768px) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../img/hero-bg_tab@1x.jpg");
+	}
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../img/hero-bg_tab@2x.jpg");
+		}
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Tablet
+================================================================================================================================================*/
+/*==============================================================================================================================================
+----------------------------------------------------------------------Tablet-Mobile
+================================================================================================================================================*/
+@media only screen and (max-width: 1157px) {
+	.hero {
+		padding: 112px 0px;
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Tablet-Mobile
+================================================================================================================================================*/
+/*==============================================================================================================================================
+----------------------------------------------------------------------Desktop
+================================================================================================================================================*/
+@media only screen and (min-width: 769px) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../img/hero-bg_desk@1x.jpg");
+	}
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../img/hero-bg_desk@2x.jpg");
+		}
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Desktop
+================================================================================================================================================*/
+/* ================================================-_(/hero)_-=============================================== */
+
+/* ================================================-_(features)_-================================================ */
+.features-svg-container {
+	background-color: var(--light);
+	border-radius: 4px;
+	min-height: 112px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 8px;
+}
+
+.heading-features {
+	font-size: 20px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+	color: var(--dark);
+	margin-bottom: 8px;
+}
+
+.features {
+	padding: 120px 0;
+}
+.features-item {
+	flex-basis: calc((100% - 3 * 24px) / 4);
+}
+@media only screen and (max-width: 767px) {
+	.heading-features {
+		text-align: center;
+	}
+	.features-item:not(:last-child) {
+		margin-bottom: 72px;
+	}
+}
+@media only screen and (max-width: 1157px) {
+	.features-svg-container {
+		display: none;
+	}
+	.heading-features {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 1.11;
+	}
+	.features {
+		padding: 96px 0;
+	}
+	.text {
+		font-weight: 500;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+	.features-item {
+		flex-basis: calc((100% - 1 * 24px) / 2);
+	}
+}
+@media only screen and (min-width: 768px) {
+	.list-features {
+		display: flex;
+		gap: 72px 24px;
+		flex-wrap: wrap;
+	}
+}
+/* ================================================-_(/features)_-=============================================== */
+
+/* ================================================-_(Work)_-================================================ */
+.work {
+	padding-top: 0;
+}
+@media only screen and (max-width: 1157px) {
+	.work {
+		display: none;
+	}
+}
+.work-item {
+	flex-basis: calc((100% - 2 * 24px) / 3);
+}
+/* ================================================-_(/Work)_-=============================================== */
+/* ================================================-_(Team)_-================================================ */
+.team-info {
+	text-align: center;
+	padding: 32px 0;
+	border-radius: 0px 0px 4px 4px;
+}
+.heading-team {
+	font-size: 20px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+	color: var(--dark);
+
+	margin-bottom: 8px;
+}
+.team {
+	background-color: var(--light);
+}
+.team-item {
+	background-color: var(--white-background);
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0px 0px 4px 4px;
+
+	flex-basis: calc((100% - 3 * 24px) / 4);
+}
+.team-social-media {
+	width: 40px;
+	height: 40px;
+}
+.links-container {
+	fill: var(--light);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--primary-brand);
+	height: 100%;
+	width: 100%;
+	transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.links-container:hover,
+.links-container:focus {
+	background-color: var(--pressed-state);
+}
+.social-media {
+	margin-top: 8px;
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+/*==============================================================================================================================================
+----------------------------------------------------------------------Phone
+================================================================================================================================================*/
+@media only screen and (max-width: 767px) {
+	.team-item {
+		flex-basis: 264px;
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Phone
+================================================================================================================================================*/
+/*==============================================================================================================================================
+----------------------------------------------------------------------Tablet
+================================================================================================================================================*/
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+	.team-item {
+		flex-basis: calc((100% - 1 * 24px) / 2);
+	}
+	.flex-list {
+		gap: 64px 24px;
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Tablet
+================================================================================================================================================*/
+
+/* ================================================-_(/Team)_-=============================================== */
+
+/* ================================================-_(customers)_-================================================ */
+.customers-link {
+	height: 100%;
+
+	border: 1px solid var(--light-slate);
+	border-radius: 4px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.list a.customers-link:focus,
+.list a.customers-link:hover {
+	border: 1px solid var(--pressed-state);
+	color: #404bbf;
+}
+.list a.customers-link {
+	color: var(--light-slate);
+	transition: border cubic-bezier(0.4, 0, 0.2, 1) 250ms, color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.customers .customers-icon {
+	fill: currentColor;
+}
+.customers-list-item {
+	width: calc((100% - 5 * 24px) / 6);
+	height: 88px;
+}
+.customers-icon {
+	width: 104px;
+	height: 56px;
+}
+.customers-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 72px 24px;
+	justify-content: center;
+}
+/*==============================================================================================================================================
+----------------------------------------------------------------------Phone
+================================================================================================================================================*/
+@media only screen and (max-width: 767px) {
+	.customers-icon {
+		width: 110px;
+		height: 56px;
+	}
+	.customers-list {
+		gap: 72px 16px;
+	}
+	.customers-list-item {
+		width: calc((100% - 1 * 16px) / 2);
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Phone
+================================================================================================================================================*/
+/*==============================================================================================================================================
+----------------------------------------------------------------------Tablet
+================================================================================================================================================*/
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+	.customers-list-item {
+		width: calc((100% - 2 * 24px) / 3);
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Tablet
+================================================================================================================================================*/
+
+/* ================================================-_(/customers)_-=============================================== */
+/* ================================================-_(/main)_-=============================================== */
+
+/*==============================================================================================================================================
+----------------------------------------------------------------------Mobile menu
+================================================================================================================================================*/
+.menu-toggle.js-close-menu {
+	display: inline-flex;
+	padding: 8px;
+
+	border-radius: 50%;
+	background-color: rgba(231, 233, 252, 0.1);
+
+	border: 1px solid rgba(46, 47, 66, 0.1);
+
+	position: absolute;
+	top: 17px;
+	right: 18px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-toggle.js-close-menu:hover,
+.menu-toggle.js-close-menu:focus {
+	background-color: var(--pressed-state);
+	fill: var(--white-background);
+}
+
+@media (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
+}
+.menu-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--white-background);
+	z-index: 999;
+
+	transform: translateX(100%);
+	transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.menu-container.is-open {
+	transform: translateX(0);
+}
+
+.mobile-menu-nav {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 40px;
+}
+
+.mobile-menu-address {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	margin-bottom: 48px;
+}
+a.mobile-menu-email {
+	font-size: 20px;
+	line-height: 24px;
+}
+a.mobile-menu-tel:hover,
+a.mobile-menu-tel:focus {
+	color: var(--text);
+}
+a.mobile-menu-tel {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11;
+	color: var(--primary-brand);
+}
+.menu-container .social-list {
+	justify-content: space-between;
+}
+.menu-container .container {
+	padding: 80px 35px 65px 40px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	align-content: space-between;
+}
+@media only screen and (max-width: 320px) {
+	a.mobile-menu-tel {
+		font-size: 26px;
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Mobile menu 
+================================================================================================================================================*/

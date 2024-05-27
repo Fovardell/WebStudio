@@ -1,24 +1,345 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load ="partials/header.html" />
+<html lang='en'>
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>WebStudio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
+	<link rel='stylesheet' href='./css/styles.css'>
+</head>
 
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+<body>
+	<load ="./partials/header.html" />
 
-    <script type="module" src="./main.js"></script>
-  </body>
+	<main>
+		<section class="hero">
+			<div class="container">
+				<h1 class="title-hero">Effective Solutions for Your Business</h1>
+				<button class="button-hero" type="button">Order
+					Service</button>
+			</div>
+		</section>
+		<section class="features">
+			<div class="container">
+				<h2 class="section-title visually-hidden">Our features</h2>
+				<ul class="list list-features">
+					<li class="features-item">
+						<div class="features-svg-container">
+							<svg class="icon" width="64" height="64">
+								<use href="./img/icon.svg#antenna"></use>
+							</svg>
+						</div>
+						<h3 class="heading-features thickness">Strategy</h3>
+						<p class="text">
+							Our goal is to identify the business problem to walk away with the
+							perfect and creative solution.
+						</p>
+					</li>
+					<li class="features-item">
+						<div class="features-svg-container">
+							<svg class="icon" width="64" height="64">
+								<use href="./img/icon.svg#clock"></use>
+							</svg>
+						</div>
+						<h3 class="heading-features thickness">Punctuality</h3>
+						<p class="text">
+							Bring the key message to the brand's audience for the best price
+							within the shortest possible time.
+						</p>
+					</li>
+					<li class="features-item">
+						<div class="features-svg-container">
+							<svg class="icon" width="64" height="64">
+								<use href="./img/icon.svg#diagram"></use>
+							</svg>
+						</div>
+						<h3 class="heading-features thickness">Diligence</h3>
+						<p class="text">Research and confirm brands that present the
+							strongest digital growth opportunities and minimize risk. </p>
+					</li>
+					<li class="features-item">
+						<div class="features-svg-container">
+							<svg class="icon" width="64" height="64">
+								<use href="./img/icon.svg#astronaut"></use>
+							</svg>
+						</div>
+						<h3 class="heading-features thickness">Technologies</h3>
+						<p class="text">
+							Design practice focused on digital experiences. We bring forth a
+							deep passion for problem-solving.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="work section-geometry">
+			<div class="container">
+				<h2 class="section-title">What are we doing</h2>
+				<ul class="list list-styles flex-list">
+					<li class="work-item"><img
+							srcset="./img/computer_desk@1x.jpg 1x, ./img/computer_desk@2x.jpg 2x"
+							loading="lazy" src="./img/computer_desk@1x.jpg"
+							alt="monitor with statistics" width="360" height="300">
+					</li>
+					<li class="work-item"><img
+							srcset="./img/chat_desk@1x.jpg 1x, ./img/chat_desk@2x.jpg 2x"
+							loading="lazy" src="./img/chat_desk@1x.jpg"
+							alt="chat with messages on phone screen" width="360" height="300">
+					</li>
+					<li class="work-item"><img
+							srcset="./img/iphone_desk@1x.jpg 1x, ./img/iphone_desk@2x.jpg 2x"
+							loading="lazy" src="./img/iphone_desk@1x.jpg"
+							alt="most inspiring places on phone screen" width="360"
+							height="300">
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="team section-geometry">
+			<div class="container">
+				<h2 class="section-title">Our Team</h2>
+				<ul class="list list-styles flex-list">
+					<li class="team-item"><img
+							srcset="./img/mark_desk@1x.jpg 1x, ./img/mark_desk@2x.jpg 2x"
+							loading="lazy" src="./img/mark_desk@1x.jpg"
+							alt="photo of Mark Guerrero" width="264" height="260">
+						<div class="team-info">
+							<h3 class="heading-team thickness">Mark Guerrero</h3>
+							<p class="text">
+								Product Designer
+							</p>
+							<ul class="list social-media">
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#linkedin"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="team-item"><img
+							srcset="./img/tom_desk@1x.jpg 1x, ./img/tom_desk@2x.jpg 2x"
+							loading="lazy" src="./img/tom_desk@1x.jpg" alt="photo of Tom Ford"
+							width="264" height="260">
+						<div class="team-info">
+							<h3 class="heading-team thickness">Tom Ford</h3>
+							<p class="text">
+								Frontend Developer
+							</p>
+							<ul class="list social-media">
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#linkedin"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="team-item"><img
+							srcset="./img/camila_desk@1x.jpg 1x, ./img/camila_desk@2x.jpg 2x"
+							loading="lazy" src="./img/camila_desk@1x.jpg"
+							alt="photo of Camila Garcia" width="264" height="260">
+						<div class="team-info">
+							<h3 class="heading-team thickness">Camila Garcia</h3>
+							<p class="text">
+								Marketing
+							</p>
+							<ul class="list social-media">
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media">
+									<a href="" class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media">
+									<a href="" class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#linkedin"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="team-item"><img
+							srcset="./img/daniel_desk@1x.jpg 1x, ./img/daniel_desk@2x.jpg 2x"
+							loading="lazy" src="./img/daniel_desk@1x.jpg"
+							alt="photo of Daniel Wilson" width="264" height="260">
+						<div class="team-info">
+							<h3 class="heading-team thickness">Daniel Wilson</h3>
+							<p class="text">
+								UI Designer
+							</p>
+							<ul class="list social-media">
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="team-social-media"><a href=""
+										class="links-container">
+										<svg class="icon team-links" width="16" height="16">
+											<use href="./img/icon.svg#linkedin"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="customers section-geometry">
+			<div class="container">
+				<h2 class="section-title">Customers</h2>
+				<ul class="customers-list list">
+					<li class="customers-list-item">
+						<a href="" class="customers-link">
+							<svg class="customers-icon">
+								<use href="./img/icon.svg#logo1"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="customers-list-item">
+						<a href="" class="customers-link">
+							<svg class="customers-icon">
+								<use href="./img/icon.svg#logo2"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="customers-list-item">
+						<a href="" class="customers-link">
+							<svg class="customers-icon">
+								<use href="./img/icon.svg#logo3"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="customers-list-item">
+						<a href="" class="customers-link">
+							<svg class="customers-icon">
+								<use href="./img/icon.svg#logo4"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="customers-list-item">
+						<a href="" class="customers-link">
+							<svg class="customers-icon">
+								<use href="./img/icon.svg#logo5"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="customers-list-item">
+						<a href="" class="customers-link">
+							<svg class="customers-icon">
+								<use href="./img/icon.svg#logo6"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</section>
+	</main>
+
+
+	<load ="./partials/footer.html" />
+
+	<load ="./partials/modal-window.html" />
+	<load ="./partials/mobile-menu.html"/>
+
+	<script defer
+		src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+		integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+		crossorigin="anonymous"></script>
+	<script type="module" src="./main.js"></script>
+</body>
+
 </html>

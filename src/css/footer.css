@@ -1,0 +1,171 @@
+.footer {
+	background-color: var(--dark);
+	padding: 100px 0;
+}
+.footer p {
+	max-width: 265px;
+}
+
+.footer-logo {
+	margin-bottom: 16px;
+	display: inline-block;
+}
+.footer .logo-accent,
+.footer .text {
+	color: var(--light);
+	font-weight: normal;
+}
+.footer-paragraph {
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--white-background);
+
+	margin-bottom: 16px;
+	display: block;
+}
+
+.links-container-footer {
+	padding: 8px;
+
+	height: 100%;
+	width: 100%;
+
+	transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.social-list {
+	display: flex;
+	gap: 16px;
+}
+.links-container-footer:hover,
+.links-container-footer:focus {
+	background-color: #31d0aa;
+}
+
+.footer-form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px 24px;
+}
+.footer .container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.subscribe-input {
+	border: 1px solid #fff;
+	border-radius: 4px;
+	padding: 8px 16px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 2;
+	letter-spacing: 0.04em;
+	opacity: 0.6;
+
+	background-color: transparent;
+	outline: none;
+
+	transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.subscribe-input:hover,
+.subscribe-input:focus {
+	opacity: 1;
+}
+
+.subscribe-input::placeholder {
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 2;
+	letter-spacing: 0.04em;
+}
+
+.footer-btn {
+	color: #fff;
+	fill: currentColor;
+	font-weight: 500;
+
+	background-color: var(--primary-brand);
+	border-color: transparent;
+	border-radius: 4px;
+
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 24px;
+	gap: 16px;
+
+	transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.footer-btn:hover,
+.footer-btn:focus {
+	background-color: var(--pressed-state);
+}
+/*==============================================================================================================================================
+----------------------------------------------------------------------Phone
+================================================================================================================================================*/
+@media only screen and (max-width: 767px) {
+	.footer-logo {
+		margin: 0 auto 16px auto;
+	}
+	.footer-info {
+		max-width: 268px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.footer-paragraph {
+		text-align: center;
+	}
+	.subscribe-wrapper {
+		width: 100%;
+	}
+	.subscribe-input {
+		width: 100%;
+	}
+	.footer-btn {
+		margin: 0 auto;
+	}
+	.footer .container {
+		justify-content: center;
+	}
+}
+
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Phone
+================================================================================================================================================*/
+/*==============================================================================================================================================
+----------------------------------------------------------------------Phone-Tablet
+================================================================================================================================================*/
+@media only screen and (max-width: 1157px) {
+	.footer {
+		padding: 96px 0;
+	}
+	.footer .container {
+		gap: 72px 24px;
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Phone-Tablet
+================================================================================================================================================*/
+/*==============================================================================================================================================
+----------------------------------------------------------------------Tablet-Desktop
+================================================================================================================================================*/
+@media only screen and (min-width: 768px) {
+	.footer .container {
+		align-items: baseline;
+	}
+	.subscribe-input {
+		width: 264px;
+	}
+}
+/*==============================================================================================================================================
+---------------------------------------------------------------------/Tablet-Desktop
+================================================================================================================================================*/
+
+@media only screen and (min-width: 1158px) {
+	.footer-info {
+		margin-right: 120px;
+	}
+	.subscribe-wrapper {
+		margin-left: auto;
+	}
+}
