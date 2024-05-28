@@ -14,7 +14,7 @@
 				<span class="modal-label">Name</span>
 				<span class="modal-input-wrapper">
 					<input class="modal-input" type="text" name="user_name" minlength="2"
-						pattern="^[a-zA-Z]+$" required>
+						pattern="^[a-zA-Z]+([ '-][a-zA-Z]+)*$" required>
 					<svg class="modal-input-svg" width="18" height="18">
 						<use href="./img/icon.svg#person"></use>
 					</svg>
@@ -44,7 +44,8 @@
 				<textarea class="modal-textarea" name="user_comment"
 					placeholder="Text input"></textarea></label>
 			<label class="policy-label">
-				<input type="checkbox" name="policy" class="policy visually-hidden">
+				<input type="checkbox" name="policy" class="policy visually-hidden"
+					required>
 				<span class="checkbox">
 					<svg class="svg-on" width="10" height="8">
 						<use href="./img/icon.svg#on"></use>
